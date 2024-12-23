@@ -1,0 +1,153 @@
+html, body {
+    margin: 30px 0 0 0;
+    padding: 0;
+    /* min-height: 100vh; */
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+    /* width:100%;
+    height: 100vh; */
+}
+
+#grid-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* 让鼠标事件穿透到下层元素 */
+    display: grid;
+    grid-template-columns: repeat(100, 20px); /* 使用您原来的20px网格大小 */
+    grid-template-rows: repeat(100, 20px);
+    aspect-ratio: 1;
+    z-index: -1; /* 确保在游戏界面之上 */
+}
+
+.grid-cell {
+    border: 1px solid rgba(200, 200, 200, 0.5);
+    transition: background-color 0.3s;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* height: 550px; */
+}
+
+#game-boy-emulator {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    /* height:550px; */
+    background-color: rgb(255, 255, 255); 
+    border: 1px solid rgb(0, 0, 0); 
+    border-radius: 5px; 
+    padding: 30px 20px; 
+    box-shadow: rgba(233, 233, 233, 0.8) 0px 0px 20px;
+}
+
+#game-cotainer {
+    width: 300px;
+    height: 300px;
+    /* justify-content: center; */
+}
+
+#score-container {
+    display:inline; 
+    text-align: center; 
+    width:300px; 
+    font-weight: bold; 
+    position: absolute; 
+    margin: 0px; 
+    color: rgb(255, 255, 255); 
+    margin-top: 5px;
+}
+
+button {
+    border: 1px solid black;  /* 1px黑色实线边框 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    /* outline: none; */
+    
+    /* color: white; background-color: red; width: 40px; height: 40px;  border-radius: 5px; */
+}
+
+
+
+#game-boy-text {
+    font-family: "doto", serif;
+    text-align: center;
+    /* font-style: italic; */
+    color: gold; 
+    /* color:pink */
+    margin: 10px 0px; 
+    font-size: 50px; 
+    font-weight: bold; 
+    background-color: rgb(255, 255, 255); 
+    padding: 5px; 
+    border-radius: 5px;
+
+}
+#button-container {
+    height: 120px;
+    display: grid;
+    grid-template-columns: 40px 40px 40px 1fr 40px 40px;
+    grid-template-rows: 40px 40px 40px;
+    width: 100%;
+}
+
+#left {
+    grid-area: 2/1/3/2;
+    margin: 0;
+    border-radius: 5px 0 0 5px; 
+    border-right: none;
+    font-size: 20px;
+}
+
+#right {
+    grid-area: 2/3/3/4;
+    margin: 0;
+    border-radius: 0 5px 5px 0; 
+    border-left:none;
+    font-size: 20px;
+}
+
+#up {
+    grid-area: 1/2/2/3;
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 1px solid black;
+    border-bottom: none;
+    font-size: 22px;
+}
+
+#blank {
+    grid-area: 2/2/3/3;
+    font-size: 20px;
+}
+
+#down {
+    grid-area: 3/2/4/3;
+    margin: 0;
+    border-radius: 0 0 5px 5px;
+    border-top: none;
+    font-size: 22px;
+}
+
+#start {
+    grid-area: 2/6/2/6;
+    /* justify-self: end; */
+}
+
+#pause {
+    grid-area: 1/7/2/8;
+} 
+
