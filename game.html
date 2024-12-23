@@ -47,13 +47,13 @@
     <script src="snakeGame.js"></script>
     <script>
                 document.addEventListener("DOMContentLoaded", function() {
-            // 创建网格容器
+
             const overlay = document.createElement('div');
             overlay.id = 'grid-overlay';
             document.body.appendChild(overlay);
 
-            // 创建网格单元格
-            const cellsCount = 10000; // 50x50网格
+
+            const cellsCount = 10000; 
             for (let i = 0; i < cellsCount; i++) {
                 const cell = document.createElement('div');
                 cell.className = 'grid-cell';
@@ -61,14 +61,14 @@
             }
 
             function getRandomColor() {
-                // 使用半透明的颜色以保持与黄色背景的协调
+         
                 const colors = [
-                    'rgba(255, 0, 0, 0.3)',    // 红
-                    'rgba(0, 255, 0, 0.3)',    // 绿
-                    'rgba(0, 0, 255, 0.3)',    // 蓝
-                    'rgba(255, 165, 0, 0.3)',  // 橙
-                    'rgba(128, 0, 128, 0.3)',  // 紫
-                    'rgba(0, 255, 255, 0.3)'   // 青
+                    'rgba(255, 0, 0, 0.3)',    
+                    'rgba(0, 255, 0, 0.3)',    
+                    'rgba(0, 0, 255, 0.3)',   
+                    'rgba(255, 165, 0, 0.3)',  
+                    'rgba(128, 0, 128, 0.3)',  
+                    'rgba(0, 255, 255, 0.3)'   
                 ];
                 return colors[Math.floor(Math.random() * colors.length)];
             }
@@ -76,18 +76,18 @@
             function flashRandomCells() {
                 const cells = document.querySelectorAll('.grid-cell');
                 cells.forEach(cell => {
-                    // 降低闪烁概率到5%使效果更细腻
+                 
                     if (Math.random() < 0.05) {
                         cell.style.backgroundColor = getRandomColor();
-                        // 闪烁后恢复透明
+                     
                         setTimeout(() => {
                             cell.style.backgroundColor = 'transparent';
-                        }, 2000); // 100-400ms的随机持续时间
+                        }, 2000); 
                     }
                 });
             }
 
-            // 每200ms更新一次，降低频率使效果不那么急促
+           
             setInterval(flashRandomCells, 1000);
         });
     </script>
