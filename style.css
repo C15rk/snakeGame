@@ -160,13 +160,15 @@ button {
     
     #button-container {
         gap: 3px;
-        grid-template-rows: repeat(3, 35px);
+        grid-template-rows: repeat(3, 30px);
     }
     
     button {
         font-size: 16px;
         /* 确保触摸区域足够大 */
-        min-height: 44px;
+        height: 30px;
+        width: 30px;
+        
         transform: scale(0.8);
         transform-origin: center;
     }
