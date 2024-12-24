@@ -100,7 +100,7 @@ button {
 #button-container {
     height: 120px;
     display: grid;
-    grid-template-columns: 40px 40px 40px 1fr 40px 40px;
+    grid-template-columns: 40px 40px 40px 100px 40px 40px;
     grid-template-rows: 40px 40px 40px;
     width: 100%;
 }
@@ -144,7 +144,7 @@ button {
 }
 
 #start {
-    grid-area: 2/6/2/6;
+    grid-area: 2/5/3/6;
     color: rgb(0, 0, 0); 
     background-color: rgb(255, 255, 255); 
     width: 40px; 
@@ -153,7 +153,7 @@ button {
 }
 
 #pause {
-    grid-area: 1/7/2/8;
+    grid-area: 1/6/2/7;
     color: rgb(0, 0, 0); 
     background-color: rgb(255, 255, 255); 
     width: 40px; 
@@ -167,7 +167,7 @@ button {
         #button-container {
             height: 90px;
             display: grid;
-            grid-template-columns: 30px 30px 30px 1fr 30px 30px;
+            grid-template-columns: 30px 30px 30px 150px 30px 30px;
             grid-template-rows: 30px 30px 30px;
             width: 100%;
             align-items: center;
@@ -188,22 +188,18 @@ button {
         }
 
         #down {
-            font-size: 10px;
             border-top: none;
         }
 
         #left {
-            font-size: 10px;
             border-right: none;
         }
 
         #up {
-            font-size: 10px;
             border-bottom: none;
         }
 
         #right {
-            font-size: 10px;
             border-left: none;
         }
 
