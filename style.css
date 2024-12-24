@@ -15,12 +15,12 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* 让鼠标事件穿透到下层元素 */
+    pointer-events: none; 
     display: grid;
-    grid-template-columns: repeat(100, 20px); /* 使用您原来的20px网格大小 */
+    grid-template-columns: repeat(100, 20px); 
     grid-template-rows: repeat(100, 20px);
     aspect-ratio: 1;
-    z-index: -1; /* 确保在游戏界面之上 */
+    z-index: -1; 
 }
 
 .grid-cell {
@@ -67,7 +67,7 @@ main {
 }
 
 button {
-    border: 1px solid black;  /* 1px黑色实线边框 */
+    border: 1px solid black;  
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -145,10 +145,66 @@ button {
 
 #start {
     grid-area: 2/6/2/6;
-    /* justify-self: end; */
+    color: rgb(0, 0, 0); 
+    background-color: rgb(255, 255, 255); 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 40px;
 }
 
 #pause {
     grid-area: 1/7/2/8;
+    color: rgb(0, 0, 0); 
+    background-color: rgb(255, 255, 255); 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 40px;
 } 
 
+@media screen and (max-width: 390px), 
+       screen and (max-device-width: 390px) {
+
+        #button-container {
+            height: 90px;
+            display: grid;
+            grid-template-columns: 30px 30px 30px 1fr 30px 30px;
+            grid-template-rows: 30px 30px 30px;
+            width: 100%;
+        }
+
+        button, #left, #right, #up, #down, #blank {
+            border: 1px solid black;  
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+            font-size: 10px;
+        }
+
+        #down {
+            border-top: none;
+        }
+
+        #left {
+            border-right: none;
+        }
+
+        #up {
+            border-bottom: none;
+        }
+
+        #right {
+            border-left: none;
+        }
+
+        #start, #pause {
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+        }
+
+}
