@@ -170,6 +170,8 @@ button {
             grid-template-columns: 30px 30px 30px 1fr 30px 30px;
             grid-template-rows: 30px 30px 30px;
             width: 100%;
+            align-items: center;
+            justify-content: center;
         }
 
         button, #left, #right, #up, #down, #blank {
