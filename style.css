@@ -164,7 +164,7 @@ button {
     }
     
     button {
-        font-size: 16px;
+        font-size: 12px;
         /* 确保触摸区域足够大 */
         height: 30px;
         width: 30px;
@@ -182,14 +182,14 @@ button {
 @media screen and (-webkit-min-device-pixel-ratio: 2),
        screen and (min-resolution: 192dpi) {
     button {
-        border-width: 0.5px;
+        border-width: 1px;
     }
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 3),
        screen and (min-resolution: 288dpi) {
     button {
-        border-width: 0.33px;
+        border-width: 1px;
     }
 }
 
