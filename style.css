@@ -192,6 +192,7 @@ button {
         }
 
         #left {
+            text-color: red;
             border-right: none;
             font-size: 10px;
         }
