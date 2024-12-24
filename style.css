@@ -193,6 +193,7 @@ button {
 
         #left {
             border-right: none;
+            font-size: 10px;
         }
 
         #up {
