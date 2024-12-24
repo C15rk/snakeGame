@@ -188,18 +188,22 @@ button {
         }
 
         #down {
+            font-size: 10px;
             border-top: none;
         }
 
         #left {
+            font-size: 10px;
             border-right: none;
         }
 
         #up {
+            font-size: 10px;
             border-bottom: none;
         }
 
         #right {
+            font-size: 10px;
             border-left: none;
         }
 
